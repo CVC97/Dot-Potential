@@ -36,7 +36,7 @@ export class DrawImage {
 
         // "cat" dot
         ctx.beginPath();
-        ctx.arc(this.nl_cx-32, this.nl_cy-32, 10, 0, 2 * Math.PI);
+        ctx.arc(this.nl_cx, this.nl_cy, 10, 0, 2 * Math.PI);
         ctx.fillStyle = "white";
         ctx.lineWidth = 1;
         ctx.fill();
