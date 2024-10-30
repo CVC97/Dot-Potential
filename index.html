@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simulating Point Particles</title>
+        <link rel="icon" href="images/icons/v_3466.ico">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet navigation" href="styles/navigation.css">
+        <meta charset="utf-8">
+    </head>
+    <body style="background-color:#222;">
+        <div class="main">
+            <div class="main_head_style">
+                <h1 style="height: 20px;" class="unselect_title"> 
+                    Physics of a Point Particle in a Potential
+                </h1>
+                <h2 class="unselect_subtitle"> 
+                    by Carlo von Carnap 
+                </h2>
+            </div>
+            <div>
+                <canvas class="canvas_style" id="CatCanvas", width="1600" height="1000"></canvas>
+            </div>
+            <footer>            
+                <div class="footer"> 2024 Carlo von Carnap, Physik und ihre Didaktik, Georg-August-Universität Göttingen</div>
+            </footer>
+        </div>
+        <div class="navigation">
+            <div class="operation_bar">
+                <button style ="float: left; width: 33.33%" id="start_button">START</button>
+                <button style ="float: center; width: 33.33%" id="call_button">CALL</button>
+                <button style ="float: right; width: 33.33%" id="reset_button">RESET</button>
+            </div>
+            <div class="parameter_column">
+                <div>
+                    <h3 class="navigation_headline">Potential Options</h3>
+                    <hr style="width:90%">
+                    <div>
+                        <div>
+                            <label for="coupling_constant" class="descriptor_headline">Coupling Constant:</label> 
+                        </div>
+                        <div>
+                            <input class="slider_style" id="coupling_constant" name="coupling-constant" type="range" value="1" min="0.1" max="1" step="0.1"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="bond_strength" class="descriptor_headline">Depth of Centre Well:</label> 
+                        </div>
+                        <div>
+                            <input class="slider_style" id="bond_strength" name="bond-strength" type="range" value="0.5" min="0" max="1" step="0.1"/>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="navigation_headline">Particle Options</h3>
+                    <hr style="width:90%"> 
+                    <div>
+                        <div>
+                            
+                        </div>
+                        <div>
+                            <input type="checkbox" id="check_friction" class="checkbox_style" checked="true">
+                            <label for="number_friction" class="descriptor_headline_checkbox" >Friction Force:</label> 
+                        </div>
+                        <div>
+                            <input class="slider_style" id="number_friction" name="number-friction" type="range" value="0.5"  min="0" max="1" step="0.1"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="checkbox" id="check_noise" class="checkbox_style" checked="true">
+                            <label for="number_noise" class="descriptor_headline_checkbox" >Noise Strength:</label> 
+                        </div>
+                        <div>
+                            <input class="slider_style" id="number_noise" name="number-noise" type="range" value="1.5"  min="0" max="3" step="0.3"/>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="navigation_headline">Initial Conditions</h3>
+                    <hr style="width:90%">
+                    <div class="input_grid">
+                        <div>
+                            <div>
+                                <label for="init_x" class="descriptor_headline" >Position:</label>
+                            </div>
+                            <div>
+                                <input id="init_x" class="input_style" name="init_x" type="number-input" value="-0.5"/>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="init_vx" class="descriptor_headline" >Velocity:</label>
+                            </div>
+                            <div>
+                                <input id="init_vx" class="input_style" name="init_vx" type="number-input" value="0.5"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="navigation_headline">Animation Setup</h3>
+                    <hr style="width:90%">    
+                    <div>
+                        <div>
+                            <label for="delta_t" class="descriptor_headline" >Animation Speed:</label>
+                        </div>
+                        <div>
+                            <input class="slider_style" id="delta_t" name="delta_t" type="range" value="0"  min="-5" max="5"/>
+                        </div>
+                    </div> 
+                </div>
+            </div> 
+        </div>
+    </body>
+    <script src="./scripts/catsim.js" type="module"></script>
+</html> 

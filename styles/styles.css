@@ -1,0 +1,52 @@
+/* style for the page layout */
+.footer { 
+    position: fixed; 
+    bottom: 0; 
+    text-align: right;
+    z-index: 10;
+    color: grey;
+    font-family: Khula, sans-serif
+}
+
+.unselect_title {
+    font-weight: 900;
+    font-size: xx-large;
+    color: #d3d4d3; 
+    font-family: Khula, sans-serif; 
+    text-align: center;
+}
+
+.unselect_subtitle {
+    font-weight: 50;
+    font-size: large;
+    color: #d3d4d3; 
+    font-family: Khula, sans-serif; 
+    text-align: center;
+}
+
+.main {
+    display: grid;
+    position: fixed;
+    left: 0;
+    width: 75%;
+}
+
+.main_head_style {
+    height: 100px;
+    width: 100%;
+}
+
+.canvas_style {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.navigation {
+    background-color: #EEE;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+}
